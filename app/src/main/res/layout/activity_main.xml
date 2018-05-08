@@ -9,9 +9,11 @@
 
     <ImageView
         android:id="@+id/banner"
-        android:layout_width="384dp"
+        android:layout_width="0dp"
         android:layout_height="150dp"
         android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/devslopesbanner" />
 
     <ImageView
@@ -31,7 +33,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:fontFamily="serif"
-        android:text="Devslopes"
+        android:text="@string/devslopes"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -73,4 +75,66 @@
         app:layout_constraintStart_toEndOf="@+id/star"
         app:layout_constraintTop_toBottomOf="@+id/logo"
         app:srcCompat="@mipmap/inbox" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/camera"
+        app:srcCompat="@mipmap/dataimage" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@mipmap/videoimage" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@mipmap/imageimage" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@mipmap/codeimage" />
+
+
 </android.support.constraint.ConstraintLayout>
